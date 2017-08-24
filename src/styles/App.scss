@@ -1,0 +1,146 @@
+@import "react-autosuggest";
+@import "base";
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.right {
+  width: 29%;
+  margin-left: 70%;
+}
+.search-input {
+  text-align: right;
+}
+li{
+  list-style: none;
+  min-height: 10px;
+}
+a:hover {
+  text-decoration: none;
+}
+.panel-body {
+  padding: 0;
+  width: 99%;
+  background:  #795548;
+}
+.panel-body:nth-child(1) {
+  margin-top: 15px;
+}
+.panel-body.active {
+  background: #24262c;
+}
+.panel-body:hover {
+  background-color:#b77555;
+  cursor: pointer;
+}
+.photo {
+  float: left;
+  margin-right: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+img {
+  padding-bottom: 20PX;
+}
+a {
+    color: navajowhite !important;
+}
+.deleteBtn {
+  float: right;
+  position: relative;
+  bottom: 115px;
+  right: 25px;
+}
+
+.user-info {
+  margin-left:50px;
+  vertical-align: middle;
+  h1,h4,h3{
+    margin: 0 0;
+    text-shadow: -4px 3px 4px rgba(0, 0, 0, 0.38);
+    color: navajowhite;
+    padding-top: 20px;
+  }
+}
+
+header {
+  .container {
+     width: 100%;
+  }
+  .container-fluid {
+    background-color: saddlebrown;
+  }
+  li > a.active {
+     background-color: saddlebrown;
+     color:#FFF;
+  }
+  li:hover {
+     background-color: #b77555;
+  }
+  nav {
+      background: #795548;
+  }
+ .hide {
+  display: none;
+ }
+ .navbar-default {
+    width: 129rem;
+    margin-left: -2rem;
+ }
+ .navbar-default .navbar-nav>li>a {
+    color: navajowhite !important;
+ }
+  .navbar-default .navbar-nav>li>a:hover{
+  color: #FFF;
+  }
+ .navbar-brand {
+  padding: 0px;
+  }
+ .navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+  }
+ .header .navbar-brand {
+  display: flex;
+  align-items: center;  
+  }
+ .brand-img {
+    background-image: url("../assets/logo.png");
+    background-size: 50px 40px;
+    background-repeat: no-repeat;
+    background-position: 8% 41%;
+    width: 170px;
+    height: 42px;
+    display: block;
+    margin-top: 6px;
+  }
+}
+
+
+/*candidate info*/
+.candidate-info {
+  .panel-heading {
+    margin-right: 1rem;
+    background: #b77555 !important;
+    font-weight: bold;
+    text-align: center;
+    height: 80%;
+    h2,h3 {
+      color: navajowhite;
+      text-shadow: -4px 3px 4px rgba(0, 0, 0, 0.38);
+    }
+  }
+  .candidate-info-panel-body {
+      color:antiquewhite;
+      .panel {
+        background-color: transparent !important;
+        margin-top: 9rem;
+      }
+      p {
+        width: 800px;
+        margin-left: 15%;   
+      }
+  }
+}
