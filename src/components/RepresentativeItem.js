@@ -42,9 +42,21 @@ const RepresentativeItem = ({ representative, onRemove, onSelect }) => (
 
     );
 
-RepresentativeItem.propTypes = {
-  representative: PropTypes.object,
-  onDelete: PropTypes.func
-}
+
+    RepresentativeItem.propTypes = {
+        representatives: PropTypes.arrayOf (
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            age: PropTypes.number,
+            name: PropTypes.string.isRequired,
+            password: PropTypes.string.isRequired,
+            region: PropTypes.string.isRequired,
+            Gender: PropTypes.string,
+            avatar: PropTypes.string
+        })
+        ),
+        onRemove: PropTypes.func.isRequired,
+        onSelect: PropTypes.func.isRequired,
+      }
 
 export default RepresentativeItem;

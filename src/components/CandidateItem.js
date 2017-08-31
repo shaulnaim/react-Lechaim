@@ -53,7 +53,8 @@ CandidateItem.propTypes = {
       representative: PropTypes.string,
       avatar: PropTypes.string
   }),
-  onRemove: PropTypes.func.isRequired
+  onRemove: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired
 }
 
 export default CandidateItem;

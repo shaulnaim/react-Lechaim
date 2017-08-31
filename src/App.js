@@ -50,6 +50,7 @@ class App extends Component {
       <Router>
         <div className="App">
             <Header/>
+            <Route exact path="/" component={Login} />
             <Route exact path="/login" component={Login} />
             <Route path="/addCandidate" render={ ()  => ( <AddCandidate
                addCandidate={this.handleAddCandidate.bind(this)}

@@ -52,6 +52,22 @@ class CandidateInfo extends Component {
     }
 }
 
+CandidateInfo.propTypes = {
+    candidate: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        age: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        location: PropTypes.shape({
+                    address: PropTypes.string,
+                    city: PropTypes.string,
+                    country: PropTypes.string
+                  }),
+        representative: PropTypes.string,
+        avatar: PropTypes.string
+    }),
+  }
+
+
 const mapStatetoProps = (state) => {
     return {
         candidate: state.candidates.selected
