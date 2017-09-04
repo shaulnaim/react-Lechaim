@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import '../styles/App.scss';
 import { reset_state } from '../actions/appActionsCreators';
@@ -62,8 +62,8 @@ class Header extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         reset_state: () => dispatch(reset_state()),
-    }
-}
+    };
+};
 
 export default connect(null, mapDispatchToProps)(Header);
 

@@ -10,11 +10,11 @@ import $ from 'jquery';
 import '../styles/forms.scss';
 
 const fieldValidations = [
-  ruleRunner("firstName", "First Name", required),
-  ruleRunner("emailAddress", "Email Address", required, email),
-  ruleRunner("password1", "Password", required, minLength(6)),
-  ruleRunner("password2", "Password Confirmation", mustMatch("password1", "Password")),
-  ruleRunner("imageurl", "Image url", required)
+  ruleRunner('firstName', 'First Name', required),
+  ruleRunner('emailAddress', 'Email Address', required, email),
+  ruleRunner('password1', 'Password', required, minLength(6)),
+  ruleRunner('password2', 'Password Confirmation', mustMatch('password1', 'Password')),
+  ruleRunner('imageurl', 'Image url', required)
 ];
 
 export default class AddCandidate extends Component {
@@ -36,7 +36,7 @@ export default class AddCandidate extends Component {
   }
 
   errorFor(field) {
-    return this.state.validationErrors[field] || "";
+    return this.state.validationErrors[field] || '';
   }
 
   handleFieldChanged(field) {
@@ -59,30 +59,30 @@ export default class AddCandidate extends Component {
 
   render() {
     return (
-      <div className="add-form form-container col-md-6 col-md-offset-3">
+      <div className='add-form form-container col-md-6 col-md-offset-3'>
         <h2>Add New Candidate</h2>
 
-        <TextView placeholder="First Name" showError={this.state.showErrors}
-          text={this.props.firstName} onFieldChanged={this.handleFieldChanged("firstName")}
-          errorText={this.errorFor("firstName")} />
+        <TextView placeholder='First Name' showError={this.state.showErrors}
+          text={this.props.firstName} onFieldChanged={this.handleFieldChanged('firstName')}
+          errorText={this.errorFor('firstName')} />
 
-        <TextView placeholder="Email Address" showError={this.state.showErrors}
-          text={this.props.emailAddress} onFieldChanged={this.handleFieldChanged("emailAddress")}
-          errorText={this.errorFor("emailAddress")} />
+        <TextView placeholder='Email Address' showError={this.state.showErrors}
+          text={this.props.emailAddress} onFieldChanged={this.handleFieldChanged('emailAddress')}
+          errorText={this.errorFor('emailAddress')} />
 
-        <TextView placeholder="Password" showError={this.state.showErrors} type="password"
-          text={this.props.password1} onFieldChanged={this.handleFieldChanged("password1")}
-          errorText={this.errorFor("password1")} />
+        <TextView placeholder='Password' showError={this.state.showErrors} type='password'
+          text={this.props.password1} onFieldChanged={this.handleFieldChanged('password1')}
+          errorText={this.errorFor('password1')} />
 
-        <TextView placeholder="Confirm Password" showError={this.state.showErrors} type="password"
-          text={this.props.password2} onFieldChanged={this.handleFieldChanged("password2")}
-          errorText={this.errorFor("password2")} />
+        <TextView placeholder='Confirm Password' showError={this.state.showErrors} type='password'
+          text={this.props.password2} onFieldChanged={this.handleFieldChanged('password2')}
+          errorText={this.errorFor('password2')} />
 
-        <TextView className="form-group" placeholder="set online img url" showError={this.state.showErrors} type="text"
-          text={this.props.imageurl} onFieldChanged={this.handleFieldChanged("imageurl")}
-          errorText={this.errorFor("imageurl")} />
+        <TextView className='form-group' placeholder='set online img url' showError={this.state.showErrors} type='text'
+          text={this.props.imageurl} onFieldChanged={this.handleFieldChanged('imageurl')}
+          errorText={this.errorFor('imageurl')} />
           
-        <input className="add-form-button" type='submit' value="Create Candidate" onClick={this.handleSubmitClicked} ></input>
+        <input className='add-form-button' type='submit' value='Create Candidate' onClick={this.handleSubmitClicked} ></input>
       </div>
     );
   }

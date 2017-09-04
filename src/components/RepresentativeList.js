@@ -6,7 +6,7 @@ import RepresentativeItem from './RepresentativeItem';
 
 const RepresentativeList = ({ representatives, onRepresentativeRemove, onRepresentativeClick}) => (
   <ul>
-    {representatives.map(representative =>
+    {representatives.map((representative) =>
     <RepresentativeItem 
         key = {representative.id} 
         representative = {representative} 
@@ -15,7 +15,7 @@ const RepresentativeList = ({ representatives, onRepresentativeRemove, onReprese
         />
     )}
   </ul>
-)
+);
 
 RepresentativeList.propTypes = {
   representatives: PropTypes.arrayOf (
@@ -29,21 +29,21 @@ RepresentativeList.propTypes = {
       avatar: PropTypes.string
   })
   ),
-}
+};
 
 
 const mapStatetoProps = (state) => {
     return { 
       representatives: state.representatives
-    }
-}
+    };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onRepresentativeRemove: id => dispatch(remove_representative(id)),
-    onRepresentativeClick: id => dispatch(select_representative(id)),
+    onRepresentativeRemove: (id) => dispatch(remove_representative(id)),
+    onRepresentativeClick: (id) => dispatch(select_representative(id)),
     get_candidates: () => dispatch(get_representatives()),
-  }
-}
+  };
+};
 
 export default connect(mapStatetoProps, mapDispatchToProps)(RepresentativeList);

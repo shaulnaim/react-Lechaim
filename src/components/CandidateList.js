@@ -14,7 +14,7 @@ const CandidateList = ({ candidates, get_candidates, onCandidateRemove, onCandid
                     filterList={(candidate) => filter({candidate})}
                 />
                 <ul>
-                  {candidates.map(candidate =>
+                  {candidates.map((candidate) =>
                     <CandidateItem
                       key={candidate.id}
                       candidate = {candidate} 
@@ -43,21 +43,21 @@ CandidateList.propTypes = {
       avatar: PropTypes.string
   })
   )
-}
+};
 
 const mapStatetoProps = (state) => {
     return { 
       candidates: state.candidates
-    }
-}
+    };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onCandidateRemove: id => dispatch(remove_candidate(id)),
-    onCandidateClick: id => dispatch(select_candidate(id)),
+    onCandidateRemove: (id) => dispatch(remove_candidate(id)),
+    onCandidateClick: (id) => dispatch(select_candidate(id)),
     get_candidates: () => dispatch(get_candidates()),
     filter: (candidate) => dispatch(filter(candidate))
-  }
-}
+  };
+};
 
 export default connect(mapStatetoProps, mapDispatchToProps)(CandidateList);

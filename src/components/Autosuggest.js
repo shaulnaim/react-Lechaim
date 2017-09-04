@@ -24,7 +24,7 @@ export default class Searchbox extends Component {
 
     const regex = new RegExp('^' + escapedValue, 'i');
 
-    return this.props.candidates.filter(candidate => regex.test(candidate.name));
+    return this.props.candidates.filter((candidate) => regex.test(candidate.name));
   }
 
   getSuggestionValue(suggestion) {
@@ -36,11 +36,10 @@ export default class Searchbox extends Component {
     );
   }
   updateList(suggestion){
-    debugger;
     this.props.filterList(suggestion);
   }
   onChange = (event, { newValue, method }) => {
-    if (newValue === "") {
+    if (newValue === '') {
       this.props.reloadList();
     }
     this.setState({
@@ -66,7 +65,7 @@ export default class Searchbox extends Component {
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "search for candidate ...",
+      placeholder: 'search for candidate ...',
       value,
       onChange: this.onChange
     };

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
@@ -57,6 +57,6 @@ const RepresentativeItem = ({ representative, onRemove, onSelect }) => (
         ),
         onRemove: PropTypes.func.isRequired,
         onSelect: PropTypes.func.isRequired,
-      }
+      };
 
 export default RepresentativeItem;
